@@ -3,7 +3,6 @@ package sb.java.springboot.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,44 +22,44 @@ public class Customer implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="cust_id")
+//	@Column(name="cust_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer cust_id; //客户编号
 	
-	@Column(name="cust_name")
+//	@Column(name="cust_name")
 	private String cust_name; //客户名称
 	
-	@Column(name="cust_user_id")
+//	@Column(name="cust_user_id")
 	private Integer cust_user_id; //负责人id
 	
-	@Column(name="cust_create_id")
+//	@Column(name="cust_create_id")
 	private Integer cust_create_id; //创建人id
 	
-	@Column(name="cust_source")
+//	@Column(name="cust_source")
 	private String cust_source; //客户信息来源
 	
-	@Column(name="cust_industry")
+//	@Column(name="cust_industry")
 	private String cust_industry; //客户所属行业
 	
-	@Column(name="cust_level")
+//	@Column(name="cust_level")
 	private String cust_level; //客户级别
 	
-	@Column(name="cust_linkman")
+//	@Column(name="cust_linkman")
 	private String cust_linkman; //联系人
 	
-	@Column(name="cust_phone")
+//	@Column(name="cust_phone")
 	private String cust_phone; //固定电话
 	
-	@Column(name="cust_mobile")
+//	@Column(name="cust_mobile")
 	private String cust_mobile; //移动电话
 	
-	@Column(name="cust_zipcode")
+//	@Column(name="cust_zipcode")
 	private String cust_zipcode; //邮政编码
 	
-	@Column(name="cust_address")
+//	@Column(name="cust_address")
 	private String cust_address; //联系地址
 	
-	@Column(name="cust_createtime")
+//	@Column(name="cust_createtime")
 	private Date cust_createtime; //创建时间
 	
 	private Integer start; //起始行

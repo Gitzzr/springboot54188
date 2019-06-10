@@ -2,7 +2,6 @@ package sb.java.springboot.entity;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,20 +17,20 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@Column(name="user_id")
+//	@Column(name="user_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer user_id;
 	
-	@Column(name="user_code")
+//	@Column(name="user_code")
 	private String user_code;
 	
-	@Column(name="user_name")
+//	@Column(name="user_name")
 	private String user_name;
 	
-	@Column(name="user_password")
+//	@Column(name="user_password")
 	private String user_password;
 	
-	@Column(name="user_state")
+//	@Column(name="user_state")
 	private Integer user_state;
 
 	public Integer getUser_id() {

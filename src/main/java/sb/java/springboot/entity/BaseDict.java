@@ -2,7 +2,6 @@ package sb.java.springboot.entity;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,29 +17,29 @@ public class BaseDict implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@Column(name="dict_id")
+//	@Column(name="dict_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private String dict_id; //数据字典id
 	
-	@Column(name="dict_type_code")
+//	@Column(name="dict_type_code")
 	private String dict_type_code; //数据字典类别代码
 	
-	@Column(name="dict_type_name")
+//	@Column(name="dict_type_name")
 	private String dict_type_name; //数据字典类别名称
 	
-	@Column(name="dict_item_name")
+//	@Column(name="dict_item_name")
 	private String dict_item_name; //数据字典项目名称
 	
-	@Column(name="dict_item_code")
+//	@Column(name="dict_item_code")
 	private String dict_item_code; //数据字典项目代码(可为空)
 	
-	@Column(name="dict_sort")
+//	@Column(name="dict_sort")
 	private Integer dict_sort; //排序字段
 	
-	@Column(name="dict_enable")
+//	@Column(name="dict_enable")
 	private String dict_enable; //1:使用 0:停用
 	
-	@Column(name="dict_memo")
+//	@Column(name="dict_memo")
 	private String dict_memo; //备注
 
 	public String getDict_id() {
