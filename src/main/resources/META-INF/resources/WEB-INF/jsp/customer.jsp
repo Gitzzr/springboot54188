@@ -517,16 +517,16 @@
 </div>
 <!-- 引入js文件 -->
 <!-- jQuery -->
-<script src="<%=basePath%>/customer/js/jquery-1.11.3.min.js"></script>
+<script src="<%=basePath%>customer/js/jquery-1.11.3.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="<%=basePath%>/customer/js/bootstrap.min.js"></script>
+<script src="<%=basePath%>customer/js/bootstrap.min.js"></script>
 <!-- Metis Menu Plugin JavaScript -->
-<script src="<%=basePath%>/customer/js/metisMenu.min.js"></script>
+<script src="<%=basePath%>customer/js/metisMenu.min.js"></script>
 <!-- DataTables JavaScript -->
-<script src="<%=basePath%>/customer/js/jquery.dataTables.min.js"></script>
-<script src="<%=basePath%>/customer/js/dataTables.bootstrap.min.js"></script>
+<script src="<%=basePath%>customer/js/jquery.dataTables.min.js"></script>
+<script src="<%=basePath%>customer/js/dataTables.bootstrap.min.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="<%=basePath%>/customer/js/sb-admin-2.js"></script>
+<script src="<%=basePath%>customer/js/sb-admin-2.js"></script>
 <!-- 编写js代码 -->
 <script type="text/javascript">
 //清空新建客户窗口中的数据
