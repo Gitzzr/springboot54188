@@ -15,16 +15,16 @@
 	<title>客户管理-BootCRM</title>
 	<!-- 引入css样式文件 -->
 	<!-- Bootstrap Core CSS -->
-	<link href="<%=basePath%>css/bootstrap.min.css" rel="stylesheet" />
+	<link href="<%=basePath%>/customer/css/bootstrap.min.css" rel="stylesheet" />
 	<!-- MetisMenu CSS -->
-	<link href="<%=basePath%>css/metisMenu.min.css" rel="stylesheet" />
+	<link href="<%=basePath%>/customer/css/metisMenu.min.css" rel="stylesheet" />
 	<!-- DataTables CSS -->
-	<link href="<%=basePath%>css/dataTables.bootstrap.css" rel="stylesheet" />
+	<link href="<%=basePath%>/customer/css/dataTables.bootstrap.css" rel="stylesheet" />
 	<!-- Custom CSS -->
-	<link href="<%=basePath%>css/sb-admin-2.css" rel="stylesheet" />
+	<link href="<%=basePath%>/customer/css/sb-admin-2.css" rel="stylesheet" />
 	<!-- Custom Fonts -->
-	<link href="<%=basePath%>css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link href="<%=basePath%>css/boot-crm.css" rel="stylesheet" type="text/css" />
+	<link href="<%=basePath%>/customer/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="<%=basePath%>/customer/css/boot-crm.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="wrapper">
@@ -181,7 +181,7 @@
 				<li><a href="#"><i class="fa fa-gear fa-fw"></i> 系统设置</a></li>
 				<li class="divider"></li>
 				<li>
-					<a href="${pageContext.request.contextPath }/logout.action">
+					<a href="${pageContext.request.contextPath }/customer/logout.action">
 					<i class="fa fa-sign-out fa-fw"></i>退出登录
 					</a>
 				</li>
@@ -517,16 +517,16 @@
 </div>
 <!-- 引入js文件 -->
 <!-- jQuery -->
-<script src="<%=basePath%>js/jquery-1.11.3.min.js"></script>
+<script src="<%=basePath%>/customer/js/jquery-1.11.3.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="<%=basePath%>js/bootstrap.min.js"></script>
+<script src="<%=basePath%>/customer/js/bootstrap.min.js"></script>
 <!-- Metis Menu Plugin JavaScript -->
-<script src="<%=basePath%>js/metisMenu.min.js"></script>
+<script src="<%=basePath%>/customer/js/metisMenu.min.js"></script>
 <!-- DataTables JavaScript -->
-<script src="<%=basePath%>js/jquery.dataTables.min.js"></script>
-<script src="<%=basePath%>js/dataTables.bootstrap.min.js"></script>
+<script src="<%=basePath%>/customer/js/jquery.dataTables.min.js"></script>
+<script src="<%=basePath%>/customer/js/dataTables.bootstrap.min.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="<%=basePath%>js/sb-admin-2.js"></script>
+<script src="<%=basePath%>/customer/js/sb-admin-2.js"></script>
 <!-- 编写js代码 -->
 <script type="text/javascript">
 //清空新建客户窗口中的数据

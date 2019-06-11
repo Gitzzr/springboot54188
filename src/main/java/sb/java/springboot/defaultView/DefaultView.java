@@ -27,7 +27,7 @@ public class DefaultView implements WebMvcConfigurer {
 			Dafa = true;
 		  registry.addInterceptor(loginInterceptor)
 		  .addPathPatterns("/**")
-		  .excludePathPatterns("/customer/delete.action","/login","/register","/register.action","/customer/create.action","/customer/getCustomerById.action","/customer/update.action","/customer/list.action","/logout.action","/login.action","/css/**","/js/**","/fonts/**","/images/**");		 
+		  .excludePathPatterns("/customer/delete.action","/customer/login","/register","/customer/register.action","/customer/create.action","/customer/getCustomerById.action","/customer/update.action","/customer/list.action","/customer/logout.action","/customer/login.action","/customer/css/**","/customer/js/**","/customer/fonts/**","/customer/images/**");		 
 	}
 	
 	@Override

@@ -13,7 +13,6 @@ import sb.java.springboot.entity.User;
 import sb.java.springboot.service.UserService;
 
 @Controller
-@RequestMapping("spring")
 public class UserController {
 
 	@Autowired
@@ -27,7 +26,7 @@ public class UserController {
 	/*
 	 * 用户登录
 	 */
-	@RequestMapping(value = "/login.action")
+	@RequestMapping(value = "/customer/login.action") 
 	public String login(String usercode, String password, Model model, HttpSession session) {
 
 		// 通过账号和密码查询用户
@@ -51,7 +50,7 @@ public class UserController {
 	/**
      * 用户注册
      */
-    @RequestMapping(value="/register.action")
+    @RequestMapping(value="/customer/register.action")
     public String register(User user, Map<String,Object> map) {
     	User user_code = userService.findByUserCode(user.getUser_code());
     	
@@ -82,7 +81,7 @@ public class UserController {
     /*
      * 用户退出登录
      */
-    @RequestMapping(value = "/logout.action")
+    @RequestMapping(value = "/customer/logout.action")
     public String logout(HttpSession session) {
     	
     	//清除Session

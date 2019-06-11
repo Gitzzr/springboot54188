@@ -5,13 +5,13 @@
 <head>
 <title>注册页面</title>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<link href="${pageContext.request.contextPath}/css/style.css"
+<link href="${pageContext.request.contextPath}/customer/css/style.css"
 	   type=text/css rel=stylesheet>
-<link href="${pageContext.request.contextPath}/css/boot-crm.css"
+<link href="${pageContext.request.contextPath}/customer/css/boot-crm.css"
 	   type=text/css rel=stylesheet>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/chur.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/customer/js/chur.min.js"></script>
 <script src=
-       "${pageContext.request.contextPath}/js/jquery-1.11.3.min.js">
+       "${pageContext.request.contextPath}/customer/js/jquery-1.11.3.min.js">
 </script>
 <meta content="MSHTML 6.00.2600.0" name=GENERATOR>
 <script>
@@ -30,7 +30,7 @@ function register(){
 </script>
 </head>
 <body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0"
-	background="${pageContext.request.contextPath}/images/cloud.jpg">
+	background="${pageContext.request.contextPath}/customer/images/cloud.jpg">
 <div ALIGN="center">
 <table border="0" width="1140px" cellspacing="0" cellpadding="0"
                                                            id="table1">
@@ -55,7 +55,7 @@ function register(){
 			 <span id="message">${msg}</span>
 		</font>
 		<%-- 提交后的位置：/WEB-INF/jsp/customer.jsp--%>
-		<form action="${pageContext.request.contextPath }/register.action" 
+		<form action="${pageContext.request.contextPath }/customer/register.action" 
 			                       method="post" onsubmit="return register()">
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
           账&nbsp;&nbsp;&nbsp;号：<input id="user_code" type="text" name="user_code" />

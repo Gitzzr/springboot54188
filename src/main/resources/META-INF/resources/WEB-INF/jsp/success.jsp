@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="${pageContext.request.contextPath }/login" 
+	<form action="${pageContext.request.contextPath }/customer/login" 
 				                       method="get" onsubmit="return true">
 			<center>
 	        <input style="color: red; font-size: 16px; margin:100px " type="submit" value="注册成功,请返回登陆页面！" />
