@@ -15,16 +15,16 @@
 	<title>客户管理-BootCRM</title>
 	<!-- 引入css样式文件 -->
 	<!-- Bootstrap Core CSS -->
-	<link href="<%=basePath%>customer/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="${pageContext.request.contextPath}/customer/css/bootstrap.min.css" rel="stylesheet" />
 	<!-- MetisMenu CSS -->
-	<link href="<%=basePath%>customer/css/metisMenu.min.css" rel="stylesheet" />
+	<link href="${pageContext.request.contextPath}/customer/css/metisMenu.min.css" rel="stylesheet" />
 	<!-- DataTables CSS -->
-	<link href="<%=basePath%>customer/css/dataTables.bootstrap.css" rel="stylesheet" />
+	<link href="${pageContext.request.contextPath}/customer/css/dataTables.bootstrap.css" rel="stylesheet" />
 	<!-- Custom CSS -->
-	<link href="<%=basePath%>customer/css/sb-admin-2.css" rel="stylesheet" />
+	<link href="${pageContext.request.contextPath}/customer/css/sb-admin-2.css" rel="stylesheet" />
 	<!-- Custom Fonts -->
-	<link href="<%=basePath%>customer/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link href="<%=basePath%>customer/css/boot-crm.css" rel="stylesheet" type="text/css" />
+	<link href="${pageContext.request.contextPath}/customer/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="${pageContext.request.contextPath}/customer/css/boot-crm.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="wrapper">
@@ -32,7 +32,7 @@
   <nav class="navbar navbar-default navbar-static-top" role="navigation"
 		 style="margin-bottom: 0">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="<%=basePath%>/customer/list.action">BOOT客户管理系统 v2.0</a>
+		<a class="navbar-brand" href="${pageContext.request.contextPath}//customer/list.action">BOOT客户管理系统 v2.0</a>
 	</div>
 	<!-- 导航栏右侧图标部分 -->
 	<ul class="nav navbar-top-links navbar-right">
@@ -517,16 +517,16 @@
 </div>
 <!-- 引入js文件 -->
 <!-- jQuery -->
-<script src="<%=basePath%>customer/js/jquery-1.11.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/customer/js/jquery-1.11.3.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="<%=basePath%>customer/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/customer/js/bootstrap.min.js"></script>
 <!-- Metis Menu Plugin JavaScript -->
-<script src="<%=basePath%>customer/js/metisMenu.min.js"></script>
+<script src="${pageContext.request.contextPath}/customer/js/metisMenu.min.js"></script>
 <!-- DataTables JavaScript -->
-<script src="<%=basePath%>customer/js/jquery.dataTables.min.js"></script>
-<script src="<%=basePath%>customer/js/dataTables.bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/customer/js/jquery.dataTables.min.js"></script>
+<script src="${pageContext.request.contextPath}/customer/js/dataTables.bootstrap.min.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="<%=basePath%>customer/js/sb-admin-2.js"></script>
+<script src="${pageContext.request.contextPath}/customer/js/sb-admin-2.js"></script>
 <!-- 编写js代码 -->
 <script type="text/javascript">
 //清空新建客户窗口中的数据
@@ -543,7 +543,7 @@
 	}
 	// 创建客户
 	function createCustomer() {
-	$.post("<%=basePath%>customer/create.action",
+	$.post("${pageContext.request.contextPath}/customer/create.action",
 	$("#new_customer_form").serialize(),function(data){
 	        if(data =="OK"){
 	            alert("客户创建成功！");
@@ -558,7 +558,7 @@
 	function editCustomer(id) {
 	    $.ajax({
 	        type:"get",
-	        url:"<%=basePath%>customer/getCustomerById.action",
+	        url:"${pageContext.request.contextPath}/customer/getCustomerById.action",
 	        data:{"id":id},
 	        success:function(data) {
 	            $("#edit_cust_id").val(data.cust_id);
@@ -577,7 +577,7 @@
 	}
     // 执行修改客户操作
 	function updateCustomer() {
-		$.post("<%=basePath%>customer/update.action",$("#edit_customer_form").serialize(),function(data){
+		$.post("${pageContext.request.contextPath}/customer/update.action",$("#edit_customer_form").serialize(),function(data){
 			if(data =="OK"){
 				alert("客户信息更新成功！");
 				window.location.reload();
@@ -590,7 +590,7 @@
 	// 删除客户
 	function deleteCustomer(id) {
 	    if(confirm('确实要删除该客户吗?')) {
-	$.post("<%=basePath%>customer/delete.action",{"id":id},
+	$.post("${pageContext.request.contextPath}/customer/delete.action",{"id":id},
 	function(data){
 	            if(data =="OK"){
 	                alert("客户删除成功！");
