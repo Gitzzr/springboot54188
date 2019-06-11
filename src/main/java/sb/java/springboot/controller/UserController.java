@@ -13,6 +13,7 @@ import sb.java.springboot.entity.User;
 import sb.java.springboot.service.UserService;
 
 @Controller
+@RequestMapping("/spring")
 public class UserController {
 
 	@Autowired
