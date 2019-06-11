@@ -15,16 +15,16 @@
 	<title>客户管理-BootCRM</title>
 	<!-- 引入css样式文件 -->
 	<!-- Bootstrap Core CSS -->
-	<link href="<%=basePath%>/customer/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="<%=basePath%>customer/css/bootstrap.min.css" rel="stylesheet" />
 	<!-- MetisMenu CSS -->
-	<link href="<%=basePath%>/customer/css/metisMenu.min.css" rel="stylesheet" />
+	<link href="<%=basePath%>customer/css/metisMenu.min.css" rel="stylesheet" />
 	<!-- DataTables CSS -->
-	<link href="<%=basePath%>/customer/css/dataTables.bootstrap.css" rel="stylesheet" />
+	<link href="<%=basePath%>customer/css/dataTables.bootstrap.css" rel="stylesheet" />
 	<!-- Custom CSS -->
-	<link href="<%=basePath%>/customer/css/sb-admin-2.css" rel="stylesheet" />
+	<link href="<%=basePath%>customer/css/sb-admin-2.css" rel="stylesheet" />
 	<!-- Custom Fonts -->
-	<link href="<%=basePath%>/customer/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link href="<%=basePath%>/customer/css/boot-crm.css" rel="stylesheet" type="text/css" />
+	<link href="<%=basePath%>customer/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="<%=basePath%>customer/css/boot-crm.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="wrapper">
