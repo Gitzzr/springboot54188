@@ -13,6 +13,7 @@ import sb.java.springboot.entity.User;
 import sb.java.springboot.service.UserService;
 
 @Controller
+@RequestMapping("/customer")
 public class UserController {
 
 	@Autowired
@@ -23,10 +24,11 @@ public class UserController {
 		return "login";
 	}
 
-	/*
+	
+	/*/
 	 * 用户登录
 	 */
-	@RequestMapping(value = "/customer/login.action") 
+	@RequestMapping(value = "/login.action") 
 	public String login(String usercode, String password, Model model, HttpSession session) {
 
 		// 通过账号和密码查询用户
@@ -50,7 +52,7 @@ public class UserController {
 	/**
      * 用户注册
      */
-    @RequestMapping(value="/customer/register.action")
+    @RequestMapping(value="/register.action")
     public String register(User user, Map<String,Object> map) {
     	User user_code = userService.findByUserCode(user.getUser_code());
     	
@@ -58,10 +60,10 @@ public class UserController {
     	if(user_code == null) {
     		userService.insertUser(user.getUser_code(), user.getUser_name(), user.getUser_password());
         	map.put("msg", "注册成功！");
-    		return "success.jsp";
+    		return "success";
     	}
     	map.put("msg","该账户已经存在，请重新注册！");
-		return "register.jsp";
+		return "register";
     	
     	
         
@@ -81,7 +83,7 @@ public class UserController {
     /*
      * 用户退出登录
      */
-    @RequestMapping(value = "/customer/logout.action")
+    @RequestMapping(value = "/logout.action")
     public String logout(HttpSession session) {
     	
     	//清除Session

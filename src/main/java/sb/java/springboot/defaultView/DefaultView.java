@@ -14,7 +14,6 @@ public class DefaultView implements WebMvcConfigurer {
 	@Autowired
     private LoginInterceptor loginInterceptor;
 	
-	
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("login");
@@ -27,7 +26,7 @@ public class DefaultView implements WebMvcConfigurer {
 			Dafa = true;
 		  registry.addInterceptor(loginInterceptor)
 		  .addPathPatterns("/**")
-		  .excludePathPatterns("/customer/delete.action","/customer/login","/register","/customer/register.action","/customer/create.action","/customer/getCustomerById.action","/customer/update.action","/customer/list.action","/customer/logout.action","/customer/login.action","/customer/css/**","/customer/js/**","/customer/fonts/**","/customer/images/**");		 
+		  .excludePathPatterns("/customer/delete.action","/customer/login","/customer/register","/customer/register.action","/customer/create.action","/customer/getCustomerById.action","/customer/update.action","/customer/list.action","/customer/logout.action","/customer/login.action","/customer/css/**","/customer/js/**","/customer/fonts/**","/customer/images/**");		 
 	}
 	
 	@Override

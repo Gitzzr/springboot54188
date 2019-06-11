@@ -65,7 +65,7 @@ function check(){
 	      </center>
          
 		 </form>
-		  <form action="${pageContext.request.contextPath }/register" 
+		  <form action="${pageContext.request.contextPath }/customer/register" 
 				                       method="get" onsubmit="return true">
 			
 	        <input style="float: right;" type="submit" value="注册" />

@@ -22,6 +22,7 @@ import sb.java.springboot.service.CustomerService;
 import sb.java.springboot.utils.Page;
 
 @Controller
+@RequestMapping("/customer")
 public class CustomerController {
 
 	@Autowired
@@ -46,9 +47,10 @@ public class CustomerController {
 	/*
 	 * 客户列表
 	 */
-	@RequestMapping(value = "/customer/list.action")
+	@RequestMapping(value = "/list.action")
 	public String list(@RequestParam(defaultValue="1") Integer page, @RequestParam(defaultValue="10") Integer rows, 
 						String custName, String custSource, String custIndustry, String custLevel, Model model) {
+		
 		
 		//条件查询所有客户
 		Page<Customer> customers = customerService.findCustomerList(page, rows, custName, custSource, custIndustry, custLevel);
@@ -69,7 +71,7 @@ public class CustomerController {
 		model.addAttribute("custIndustry", custIndustry);
 		model.addAttribute("custLevel", custLevel);
 		
-		return "customer";
+		return "customer"; 
 		
 	}
 	
@@ -78,7 +80,7 @@ public class CustomerController {
 	/*
 	 * 创建客户
 	 */
-	@RequestMapping(value = "/customer/create.action")
+	@RequestMapping(value = "/create.action")
 	@ResponseBody
 	public String customerCreate(Customer customer, HttpSession session) {
 		//获取Session中的当前用户信息
@@ -104,7 +106,7 @@ public class CustomerController {
 	/*
 	 * 通过id获取客户信息
 	 */
-	@RequestMapping("/customer/getCustomerById.action")
+	@RequestMapping("/getCustomerById.action")
 	@ResponseBody
 	public Customer getCustomerById(Integer id) {
 		Customer customer = customerService.getCustomerById(id);
@@ -114,7 +116,7 @@ public class CustomerController {
 	/*
 	 * 更新客户
 	 */
-	@RequestMapping("/customer/update.action")
+	@RequestMapping("/update.action")
 	@ResponseBody
 	public String customerUpdate(Customer customer) {
 		int rows = customerService.updateCustomer(customer);
@@ -128,7 +130,7 @@ public class CustomerController {
 	/*
 	 * 删除客户
 	 */
-	@RequestMapping("/customer/delete.action")
+	@RequestMapping("/delete.action")
 	@ResponseBody
 	public String customerDelete(Integer id) {
 		int rows = customerService.deleteCustomer(id);
