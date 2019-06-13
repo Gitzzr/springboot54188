@@ -15,8 +15,8 @@ public class DefaultView implements WebMvcConfigurer {
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("login");
-//		registry.addViewController("/customer/login").setViewName("login");
+		registry.addViewController("/customer").setViewName("login");
+		registry.addViewController("/customer/login").setViewName("login");
 		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
 	}
 
@@ -24,7 +24,7 @@ public class DefaultView implements WebMvcConfigurer {
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(loginInterceptor).addPathPatterns("/**")
-		.excludePathPatterns("/customer/login","/",
+		.excludePathPatterns("/customer/login","/customer",
 				"/customer/register", "/customer/register.action",
 				"/customer/logout.action", "/customer/login.action", "/customer/css/**", "/customer/js/**",
 				"/customer/fonts/**", "/customer/images/**");
