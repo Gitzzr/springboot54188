@@ -32,7 +32,7 @@
   <nav class="navbar navbar-default navbar-static-top" role="navigation"
 		 style="margin-bottom: 0">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="${pageContext.request.contextPath}//customer/list.action">BOOT客户管理系统 v2.0</a>
+		<a class="navbar-brand" href="${pageContext.request.contextPath}/customer/list.action">BOOT客户管理系统 v2.0</a>
 	</div>
 	<!-- 导航栏右侧图标部分 -->
 	<ul class="nav navbar-top-links navbar-right">

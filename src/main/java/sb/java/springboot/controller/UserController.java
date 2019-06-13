@@ -19,10 +19,10 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping("login")
-	public String toLogin() {
-		return "login";
-	}
+//	@RequestMapping("login")
+//	public String toLogin() {
+//		return "login";
+//	}
 
 	
 	/*/
@@ -89,7 +89,7 @@ public class UserController {
     	//清除Session
     	session.invalidate();
     	//重定向到登录页面的跳转方法
-		return "redirect : login";
+		return "redirect:customer/login";
     }
     
 }

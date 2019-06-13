@@ -21,15 +21,12 @@ public class LoginInterceptor implements HandlerInterceptor {
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("USER_SESSION");
 		if (user != null) {
-			request.getRequestDispatcher("/WEB-INF/jsp/customer.jsp").forward(request, response);
+			//request.getRequestDispatcher("/WEB-INF/jsp/customer.jsp").forward(request, response);
 			return true;
 		}
 		
-		if (!DefaultView.Dafa) {
 			request.setAttribute("msg", "您还没有登录, 请先登录!");
-		}
 		
-		DefaultView.Dafa=false;
 //		request.setAttribute("msg", "您还没有登录, 请先登录!");
 		request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);
 		return false;

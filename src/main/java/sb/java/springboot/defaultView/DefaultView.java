@@ -10,25 +10,26 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class DefaultView implements WebMvcConfigurer {
-	static boolean Dafa = false;
 	@Autowired
-    private LoginInterceptor loginInterceptor;
-	
+	private LoginInterceptor loginInterceptor;
+
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("login");
-        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+		registry.addViewController("/").setViewName("login");
+//		registry.addViewController("/customer/login").setViewName("login");
+		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
 	}
-	
+
 	// 这个方法用来注册拦截器，我们自己写好的拦截器需要通过这里添加注册才能生效
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-			Dafa = true;
-		  registry.addInterceptor(loginInterceptor)
-		  .addPathPatterns("/**")
-		  .excludePathPatterns("/customer/delete.action","/customer/login","/customer/register","/customer/register.action","/customer/create.action","/customer/getCustomerById.action","/customer/update.action","/customer/list.action","/customer/logout.action","/customer/login.action","/customer/css/**","/customer/js/**","/customer/fonts/**","/customer/images/**");		 
+		registry.addInterceptor(loginInterceptor).addPathPatterns("/**")
+		.excludePathPatterns("/customer/login","/",
+				"/customer/register", "/customer/register.action",
+				"/customer/logout.action", "/customer/login.action", "/customer/css/**", "/customer/js/**",
+				"/customer/fonts/**", "/customer/images/**");
 	}
-	
+
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
