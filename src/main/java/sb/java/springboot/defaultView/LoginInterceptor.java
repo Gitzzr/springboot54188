@@ -15,9 +15,8 @@ public class LoginInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		String url = request.getRequestURI();
-		if (url.indexOf("/login") >= 0) {
-			return true;
-		}
+		
+		System.out.println("访问地址: "+url);
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("USER_SESSION");
 		if (user != null) {
