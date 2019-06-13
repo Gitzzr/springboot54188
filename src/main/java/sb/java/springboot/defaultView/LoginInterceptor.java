@@ -16,7 +16,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 			throws Exception {
 		String url = request.getRequestURI();
 		
-		System.out.println("访问地址: "+url);
+		//System.out.println("访问地址: "+url);
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("USER_SESSION");
 		if (user != null) {
